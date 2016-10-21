@@ -4,6 +4,8 @@ from random import randint
 host = "104.131.22.46"
 port = 2000
 
+time.sleep(25)
+
 while True:
 	testMessage = ""
 
