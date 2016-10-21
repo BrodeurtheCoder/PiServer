@@ -1,18 +1,25 @@
 import socket, sys, time    # Import socket module
 from random import randint
 
-s = socket.socket()
 host = "104.131.22.46"
 port = 2000
-testMessage = ""
 
-for i in range(16):
-	testMessage += str(randint(0,9))
+while True:
+	testMessage = ""
 
+	for i in range(16):
+		testMessage += str(randint(0,9))
 
-s.connect((host, port))
+	# Networking
+	s = socket.socket() 				# Creates n
 
-# Do anything and send it below
-s.send(testMessage)
-print "Message sent successfully!"
-s.close()
+	# TODO: Implement failure check for connection failing
+	s.connect((host, port))				# Connects to server
+
+	print "Sending message %s" %testMessage
+	s.send(testMessage)					# Sends message to server
+	print "Sent message successfully!"
+	s.close()							# Closes connection to server
+	print "Closing connection to server \n"
+	time.sleep(10)						# Sleeps for n seconds before 
+										# sending again
