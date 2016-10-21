@@ -23,5 +23,5 @@ while True:
 	print "Sent message successfully!"
 	s.close()							# Closes connection to server
 	print "Closing connection to server \n"
-	time.sleep(10)						# Sleeps for n seconds before 
+	time.sleep(5)						# Sleeps for n seconds before 
 										# sending again
