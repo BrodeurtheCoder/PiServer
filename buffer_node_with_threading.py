@@ -17,9 +17,10 @@ server_sock = bluetooth.BluetoothSocket(bluetooth.L2CAP)
 
 # port must be an odd number between 0x1001 and 0x8FFF # server must be
 # listening on the same port that the client is initiating a connection to port
-= 0x1001 threads=[]
+portBlue = 0x1001
+threads=[]
 
-server_sock.bind(("",port))
+server_sock.bind(("",portBlue))
 server_sock.listen(1)
 print "Server listening..."
 
