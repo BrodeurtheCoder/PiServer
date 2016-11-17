@@ -4,9 +4,6 @@
 
 import sys, time, datetime, SDL_DS3231
 
-for i in range(16):
-	testMessage += str(randint(0,9))
-
 print ""
 print "Testing code for real time control"
 print ""
