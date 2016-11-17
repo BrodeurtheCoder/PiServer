@@ -53,15 +53,6 @@ while True:
 	print "Thread started..."
 	main_thread = threading.currentThread()
 
-	for j in threading.enumerate():
-        if j is not main_thread:
-            print "Joining thread..."
-            j.join()
-            logging.debug("joined ", j.getName())
-        if not threading.enumerate():
-            break
-
-
 	#testTimeMessage[1] = testMessage
 
 	# Networking
