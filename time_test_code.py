@@ -7,7 +7,7 @@ import sys, time, datetime, SDL_DS3231
 print ""
 print "Testing code for real time control"
 print ""
-print "starting time for system" #+ time.strftime( “%H:%M:%S” )
+print "starting time for system" + time.strftime(“%Y-%m-%d %H:%M:%S”)
 
 startTime = datetime.datetime.utcnow()
 ds3231 = SDL_DS3231.SDL_DS3231(1, 0x68)
