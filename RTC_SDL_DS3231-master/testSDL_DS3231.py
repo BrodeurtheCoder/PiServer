@@ -28,7 +28,7 @@ starttime = datetime.datetime.utcnow()
 
 ds3231 = SDL_DS3231.SDL_DS3231(1, 0x68)
 #comment out the next line after the clock has been initialized
-ds3231.write_now()
+# ds3231.write_now()
 
 # Main Loop - sleeps 10 seconds, then reads and prints values of all clocks
 # Also reads two bytes of EEPROM and writes the next value to the two bytes 

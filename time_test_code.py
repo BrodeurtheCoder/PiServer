@@ -3,10 +3,10 @@
 # then check time of each of the data packest sent from nodes
 
 import sys, time, datetime, SDL_DS3231
+coding=utf-8
 
-print "Testing code for real time control"
-
-#print "starting time for system" + time.strftime(“%Y-%m-%d %H:%M:%S”)
+print "test code for real time control"
+print "starting time for system"+ time.strftime("%Y-%m-%d %H:%M:%S")
 
 startTime = datetime.datetime.utcnow()
 ds3231 = SDL_DS3231.SDL_DS3231(1, 0x68)
@@ -18,8 +18,8 @@ while True:
 		changeInTime = currentTime - startTime
 
 		print ""
-		print "Pi time: \t" + time.strftime(“%Y-%m-%d %H:%M:%S”)
-		print "DS3231 time: \t" + time.strftime(“%Y-%m-%d %H:%M:%S”)
+		print "Pi time: \t" + time.strftime("%Y-%m-%d %H:%M:%S")
+		print "DS3231 time: \t" + time.strftime("%Y-%m-%d %H:%M:%S")
 		print "current time: ", currentTime
 		print "change in time: ", changeInTime
 		time.sleep(10)
